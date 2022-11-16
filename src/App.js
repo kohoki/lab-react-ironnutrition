@@ -3,6 +3,7 @@ import foods from './foods.json';
 import React, { useState } from 'react';
 import { Card, Row, Col, Divider, Input, Button } from 'antd';
 import FoodBox from './components/FoodBox';
+import AddFoodForm from './components/AddFoodForm';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
   return (
     <div className="App">
           {/* Display Add Food component here */}
+          <AddFoodForm/>
 
       <Button> Hide Form / Add New Food </Button>
 
