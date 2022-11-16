@@ -2,6 +2,8 @@ import './App.css';
 import foods from './foods.json';
 import React, { useState } from 'react';
 import { Card, Row, Col, Divider, Input, Button } from 'antd';
+import FoodBox from './components/FoodBox';
+
 
 function App() {
   const [food, setfood] = useState(foods);
@@ -16,10 +18,8 @@ function App() {
 
       <Divider>Food List</Divider>
 
-      <Row style={{ width: '100%',display: 'flex', justifyContent: 'center', flexdirection: 'column' }}>
-
-        
-        {food.map((element)=>{
+      <Row style={{ width: '100%',display: 'flex', justifyContent: 'center'}}> 
+        {/* {food.map((element)=>{
           return(
             <Card key = { element.image }>
               <div>
@@ -28,8 +28,13 @@ function App() {
               </div>
             </Card>
           )
-        })}
-
+        })} */}
+        <FoodBox food={ {
+          name: "Orange",
+          calories: 85,
+          image: "https://i.imgur.com/abKGOcv.jpg",
+          servings: 1
+        }} />
 
       </Row>
     
