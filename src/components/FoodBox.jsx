@@ -6,8 +6,9 @@ function FoodBox({food}) {
 
 
 return (
-    <div>
-                <Col key = { food.image }>
+    
+    
+                <Col >
                     <Card
                         title={ food.name }
                         style={{ width: 230, height: 300, margin: 10 }} >
@@ -20,8 +21,8 @@ return (
                         <Button type="primary"> Delete </Button>
                     </Card>
                 </Col>
-            
-    </div>
+                        
+    
  
   );
 }

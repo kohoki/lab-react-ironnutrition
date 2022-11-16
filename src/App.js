@@ -19,22 +19,18 @@ function App() {
       <Divider>Food List</Divider>
 
       <Row style={{ width: '100%',display: 'flex', justifyContent: 'center'}}> 
-        {/* {food.map((element)=>{
+        {food.map((element)=>{
           return(
-            <Card key = { element.image }>
-              <div>
-                <p> { element.name } </p>
-                <img src = { element.image } width = "100" />
-              </div>
-            </Card>
+            <FoodBox key={element.name} food={element}/>
           )
-        })} */}
-        <FoodBox food={ {
+        })}
+
+        {/* <FoodBox food={ {
           name: "Orange",
           calories: 85,
           image: "https://i.imgur.com/abKGOcv.jpg",
           servings: 1
-        }} />
+        }} /> */}
 
       </Row>
     
