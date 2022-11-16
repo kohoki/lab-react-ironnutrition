@@ -18,7 +18,6 @@ function AddFoodForm(props) {
         setNewImage('')
         setNewCalories(0)
         setNewServings(0)
-        
     }
     
   return (
