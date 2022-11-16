@@ -9,11 +9,21 @@ import AddFoodForm from './components/AddFoodForm';
 function App() {
   const [food, setfood] = useState(foods);
 
+  const addNewFood = (New) => {
+    console.log(New)
+    const updatedFoods = [...food, New];
+    console.log(updatedFoods)
+   
+    setfood(updatedFoods);
+  };
+
   return (
     <div className="App">
-          {/* Display Add Food component here */}
-          <AddFoodForm/>
-
+          
+          <Row style={{ width: '100%',display: 'flex', justifyContent: 'center'}}>
+            <AddFoodForm addFood = {addNewFood}/>
+          </Row>
+          
       <Button> Hide Form / Add New Food </Button>
 
       {/* Display Search component here */}
